@@ -1,0 +1,9 @@
+clear;clc;
+img=imread('lena.bmp');
+img_n=imresize(img,[2048,2048],'nearest');
+img_b=imresize(img,[2048,2048],'bilinear');
+img_c=imresize(img,[2048,2048],'bicubic');
+figure(1);imshow(img_n);title('进邻插值');
+figure(2);imshow(img_b);title('双线性插值');
+figure(3);imshow(img_c);title('双三次插值');
+figure(4);imshow(img);title('原图');
